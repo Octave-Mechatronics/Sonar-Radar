@@ -91,14 +91,26 @@ akustische Rückmeldung, abhängig davon, wie nah ein Objekt ist.
    dem Arduino IDE Serial Monitor "Save" oder einem Tool wie
    [CoolTerm](https://freeware.the-meiers.org/)) und die Datei unter
    `data/` ablegen.
+## PCB-Design
+
+Um das Breadboard-Layout auf eine echte Platine zu übertragen, wurde das komplette
+Projekt in KiCad als Arduino-Uno-Shield mit passendem Formfaktor nachgebaut.
+
+![PCB-Rendering](media/pcb_render.png)
+
+- Vollständiges Schaltplan- und Footprint-Mapping für alle Bauteile (HC-SR04 als
+  generischer Connector, Servo, RGB-LED mit 220Ω-Vorwiderständen, Buzzer)
+- ERC- und DRC-sauber, vollständig geroutet über F.Cu/B.Cu
+- Board-Kontur an den Arduino-Uno-Shield-Formfaktor angepasst
+
+KiCad-Projektdateien: [`pcb/`](pcb/)
 
 ## Nächste Schritte
 
 - [ ] MATLAB-Auswertung der geloggten Daten (`matlab/`): Mittelwert,
       Standardabweichung, Sensorcharakteristik, Polardarstellung
       Winkel vs. Abstand.
-- [ ] PCB-Version des Aufbaus in KiCad (`pcb/`), um die Verkabelung vom
-      Breadboard auf eine Platine zu übertragen.
+- [x] PCB-Version des Aufbaus in KiCad (`pcb/`) — erledigt, siehe [PCB-Design](#pcb-design).
 
 ## Video
 
